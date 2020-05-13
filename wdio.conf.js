@@ -34,7 +34,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        'tests/**/add_to_cart.js'
+        'test/specs/login.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -103,7 +103,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://www.saucedemo.com',
+    baseUrl: 'https://game.acapel.la/cases/cs',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 20000,
@@ -156,7 +156,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 600000
+        timeout: 600000,
+        require: ['@babel/register']
     },
     //
     // =====
